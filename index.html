@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>World Clock</title>
+        <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <style type="text/css">
+            body {
+                background: black;
+                font-family: Lucida, monospace;
+                font-size: 24px;
+                color: blue;
+            }
+            .container{
+                display: grid;
+                height: 17.5vh;
+                grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.04fr 0.04fr 0.04fr;
+                grid-template-areas: "title1 title2 title3 title4 title5 title6 title7 title8"
+                "clock1 clock2 clock3 clock4 clock5 clock6 clock7 clock8"
+            }
+            .title1{
+                grid-area: title1;
+                color: red;
+            }
+            .title2{
+                grid-area: title2;
+            }
+            .title3{
+                grid-area: title3;
+            }
+            .title4{
+                grid-area: title4;
+            }
+            .title5{
+                grid-area: title5;
+            }
+            .title6{
+                grid-area: title6;
+            }
+            .title7{
+                grid-area: title7;
+            }
+            .title8{
+                grid-area: title8;
+            }
+            .washingtonClock {
+                grid-area: clock1;
+                color: red;
+            }
+            .euCommandClock{
+                grid-area: clock2;
+            }
+            .tehranClock{
+                grid-area: clock3;
+            }
+            .kabulClock{
+                grid-area: clock4;
+            }
+            .beijingClock{
+                grid-area: clock5;
+            }
+            .tokyoClock{
+                grid-area: clock6;
+            }
+            .zuluClock{
+                grid-area: clock7;
+            }
+            .pacificClock{
+                grid-area: clock8;
+            }
+            .timeZoneMap{
+                grid-area: timeZoneMap;
+            }
+            @media only screen and (max-width: 1260px){
+                .container{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-template-areas: "title1" "clock1" "title2" "clock2" "title3" "clock3" "title4" "clock4" "title5" "clock5" "title6" "clock6" "title7" "clock7" "title8" "clock8"
+
+                }
+                .timeZoneMap{
+                    display: none;
+                }
+            }
+            .example::-webkit-scrollbar {
+                display: none;
+            }
+
+            .example {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+        </style>
+    </head>
+    <body class="example">
+        <div class="container">
+            <div class="title1">
+                WASHINGTON DC
+            </div>
+            <div class="title2">
+                EU COMMAND
+            </div>
+            <div class="title3">
+                TEHRAN
+            </div>
+            <div class="title4">
+                KABUL
+            </div>
+            <div class="title5">
+                BEIJING
+            </div>
+            <div class="title6">
+                TOKYO
+            </div>
+            <div class="title7">
+                ZULU
+            </div>
+            <div class="title8">
+                PACIFIC
+            </div>
+            <div id="washingtonClock" class="washingtonClock" onload="washingtonTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="euCommandClock" class = "euCommandClock" onload="euCommandTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="tehranClock" class="tehranClock" onload="tehranTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="kabulClock" class="kabulClock" onload="kabulTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="beijingClock" class="beijingClock" onload="beijingTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="tokyoClock" class="tokyoClock" onload="tokyoTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="zuluClock" class="zuluClock" onload="zuluTimeClock()"></div>
+            <script src="clock.js"></script>
+            <div id="pacificClock" class="pacificClock" onload="pacificTimeClock()"></div>
+            <script src="clock.js"></script>
+        </div>
+        <div class="timeZoneMap">
+            <center><img src="Images/time_zone_map_color.png" width="1107" height="600"></center>
+        </div>
+        
+        
+    </body>
+</html>
